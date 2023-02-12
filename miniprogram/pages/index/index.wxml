@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="container">
+
+  <scroll-view class="content" scroll-y enable-flex scroll-into-view="{{lastViewId}}" scroll-with-animation>
+
+    <view wx:for="{{chatContentList}}" wx:key="id" wx:for-item="chatContent" id="{{chatContent.id}}">
+      <view wx:if="{{!chatContent.isUser}}" class="content-item-left">
+        <image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" class="content-item-left-image"></image>
+
+        <view class="content-item-left-user">
+          <view class="content-item-left-user-name">ChatGPT</view>
+          <view class="content-item-left-user-chat">
+            <image wx:if="{{chatContent.content == 'image'}}" src="{{chatContent.url}}" class="content-item-left-user-chat-image"></image>
+            <text wx:else user-select>{{chatContent.content}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view wx:else class="content-item-right">
+        <view class="content-item-right-user-chat">
+          <text user-select>{{chatContent.content}}</text>
+        </view>
+        <image src="https://img1.baidu.com/it/u=1937936278,2694413084&fm=253&fmt=auto&app=138&f=JPEG?w=769&h=500" class="content-item-right-image"></image>
+      </view>
+    </view>
+
+  </scroll-view>
+
+  <view class="bottom">
+    <view class="bottom-input">
+      <input value="{{inputValue}}" adjust-position="{{true}}" placeholder="hello world!" confirm-type="send" style="height: 100rpx; line-height: 100rpx;" 
+             bindfocus="bindFocus" bindblur="bindBlur" bindconfirm="bindConfirm" bindinput="bindInput"/>
+    </view>
+
+    <button type="primary" size="mini" class="bottom-button" bindtap="bindButtonTap" style="line-height: 100rpx;">发送</button>
+  </view>
+
+  <!-- <view style="height: {{keyboardHeight}}px"></view> -->
+</view>

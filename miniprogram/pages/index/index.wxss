@@ -1,0 +1,90 @@
+/**index.wxss**/
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 750rpx;
+  overflow: scroll;
+  flex: 1
+}
+
+.content-item-left {
+  display: flex;
+  flex-direction: row;
+  padding-left: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.content-item-left-image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.content-item-left-user {
+  margin-left: 30rpx;
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+}
+
+.content-item-left-user-chat {
+  color: #666;
+  width: 450rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
+  background-color: #EEE;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  font-weight: normal;
+  margin-top: 10rpx;
+}
+
+.content-item-left-user-chat-image {
+  width: 450rpx;
+  height: 450rpx;
+}
+
+.content-item-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.content-item-right-image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.content-item-right-user-chat {
+  color: white;
+  width: 450rpx;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  margin-right: 20rpx;
+  background-color: #1BB84E;
+  padding: 20rpx;
+  font-weight: bold;
+  border-radius: 10rpx;
+}
+
+.bottom {
+  margin-top: 20rpx;
+  display: flex;
+  width: 100%;
+  align-self: flex-end;
+  bottom: 10rpx;
+  flex-direction: row;
+  background-color: #EEE;
+}
+
+.bottom-input {
+  margin-left: 30rpx;
+  width: 580rpx;
+}
+
+.bottom-button {
+  left: 10rpx;
+}
